@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 Months of Us ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="floating-hearts">♡ ♥ ♡ ♥ ♡</div>
+
+  <main class="container">
+
+    <!-- PAGE 1: WELCOME -->
+    <section class="page active" id="page1">
+      <div class="sticker">୨ৎ</div>
+      <p class="eyebrow">a little something made just for you</p>
+
+      <div class="welcome-card">
+        <p class="handwritten">to my shona,</p>
+        <h1>four months<br>of <span>us.</span></h1>
+        <div class="heart-divider">♡ ♥ ♡</div>
+        <p class="subheading">and a million little reasons to smile.</p>
+        <button onclick="nextPage()">open your surprise ♡</button>
+      </div>
+
+      <p class="tiny-note">made with love, just for you</p>
+    </section>
+
+    <!-- PAGE 2: FOUR MONTHS -->
+    <section class="page" id="page2">
+      <p class="eyebrow">our little milestone · 04</p>
+      <h2>four months,<br><span>countless memories.</span></h2>
+
+      <div class="scrapbook">
+        <div class="tape"></div>
+        <p class="handwritten">dear balu,</p>
+        <p>
+          Four months ago, I didn't know that someone
+          could become such a special part of my everyday life.
+          Now, even the smallest things remind me of you.
+        </p>
+        <p>
+          From random talks to silly arguments,
+          from laughter to little moments of care,
+          I'm grateful for every bit of us.
+        </p>
+        <p class="signature">— your girl ♡</p>
+      </div>
+
+      <button class="next-button" onclick="nextPage()">turn the page →</button>
+    </section>
+
+    <!-- PAGE 3: REASONS -->
+    <section class="page" id="page3">
+      <p class="eyebrow">a few things about you</p>
+      <h2>why you're my<br><span>favourite person.</span></h2>
+      <p class="hint">tap each little note to reveal a message ♡</p>
+
+      <div class="notes-grid">
+        <button onclick="showNote('Your smile makes even an ordinary day feel special. ♡')">01<br>your smile</button>
+        <button onclick="showNote('Your silly side is one of my favourite things ever. ♥')">02<br>your chaos</button>
+        <button onclick="showNote('I notice and appreciate all the little ways you care. ♡')">03<br>your heart</button>
+        <button onclick="showNote('Even our random conversations mean so much to me. ♥')">04<br>our talks</button>
+        <button onclick="showNote('You have your own little way of making me happy. ♡')">05<br>your magic</button>
+        <button onclick="showNote('Simply because you're you, cutie. ♥')">06<br>just you</button>
+      </div>
+
+      <div id="note-display">your surprise will appear here ♡</div>
+      <button class="next-button" onclick="nextPage()">one more thing →</button>
+    </section>
+
+    <!-- PAGE 4: LITTLE PROMISES -->
+    <section class="page" id="page4">
+      <p class="eyebrow">a tiny page of promises</p>
+      <h2>for you,<br><span>my cutie.</span></h2>
+
+      <div class="promise-card">
+        <p>♡ To keep choosing kindness, even on difficult days.</p>
+        <p>♡ To celebrate your little wins.</p>
+        <p>♡ To keep laughing at our silly jokes.</p>
+        <p>♡ To make more memories together.</p>
+        <p>♡ To never stop appreciating the little things.</p>
+      </div>
+
+      <p class="handwritten bottom-message">
+        here's to many more little milestones.
+      </p>
+
+      <button class="next-button" onclick="nextPage()">there's a letter for you ♡</button>
+    </section>
+
+    <!-- PAGE 5: LOVE LETTER -->
+    <section class="page" id="page5">
+      <div class="letter-intro" id="letter-intro">
+        <div class="envelope">💌</div>
+        <p class="eyebrow">a letter from my heart</p>
+        <h2>open this,<br><span>shona.</span></h2>
+        <button onclick="openLetter()">read my letter ♡</button>
+      </div>
+
+      <div class="letter-paper" id="letter-paper">
+        <p class="handwritten">my dearest shona,</p>
+        <h2>happy 4th monthsary!</h2>
+
+        <p>
+          Four months with you, and I still feel so lucky
+          to have you in my life. I may not always find
+          the perfect words, but I hope you know how much
+          you mean to me.
+        </p>
+
+        <p>
+          Thank you for the laughter, the random conversations,
+          the teasing, the little moments and all the memories
+          we've made so far. Even the simplest days become
+          special when I get to share them with you.
+        </p>
+
+        <p>
+          I know we're not perfect, and we won't always agree
+          on everything. But I hope we keep learning,
+          understanding and growing together.
+        </p>
+
+        <p>
+          I want more silly moments, more late conversations,
+          more celebrations and so many more months of us.
+        </p>
+
+        <p>
+          You are my shona, my balu and my cutie.
+          And I'm so happy that our little story is still
+          being written.
+        </p>
+
+        <p class="handwritten closing">happy 4th monthsary, baby ♡</p>
+        <p class="signature">forever your Hansika ♡</p>
+      </div>
+
+      <button class="restart" onclick="restart()">read our little story again ↺</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
