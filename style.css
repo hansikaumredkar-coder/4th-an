@@ -1,0 +1,420 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #f4c5d0;
+  --light: #fff5ed;
+  --red: #a82e48;
+  --dark: #54202f;
+  --cream: #fffaf4;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 15%, #f8dce3, transparent 35%),
+    radial-gradient(circle at 85% 85%, #e9aeba, transparent 35%),
+    linear-gradient(135deg, #f7dce2, #f4c5d0, #e9aeba);
+  color: var(--dark);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* FLOATING DECORATION */
+
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  color: rgba(168, 46, 72, 0.18);
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+/* MAIN PAGES */
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 65px 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: appear 0.7s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--red);
+  opacity: 0.75;
+  margin-bottom: 25px;
+}
+
+.sticker {
+  font-size: 55px;
+  color: var(--red);
+  margin-bottom: 15px;
+}
+
+.handwritten {
+  font-family: "Parisienne", cursive;
+  color: var(--red);
+  font-size: 30px;
+}
+
+/* WELCOME CARD */
+
+.welcome-card {
+  width: min(650px, 94vw);
+  padding: 65px 30px;
+  background: var(--cream);
+  border: 1px solid rgba(168, 46, 72, 0.15);
+  border-radius: 8px;
+  box-shadow: 12px 18px 45px rgba(110, 36, 57, 0.15);
+  position: relative;
+}
+
+.welcome-card::before {
+  content: "♡";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--red);
+  font-size: 28px;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(65px, 11vw, 110px);
+  line-height: 0.85;
+  font-weight: 500;
+  margin: 25px 0;
+}
+
+h1 span,
+h2 span {
+  font-family: "Parisienne", cursive;
+  color: var(--red);
+  font-weight: 400;
+}
+
+.heart-divider {
+  color: var(--red);
+  letter-spacing: 12px;
+  margin: 25px 0;
+}
+
+.subheading {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+}
+
+.tiny-note {
+  margin-top: 25px;
+  font-family: "Parisienne", cursive;
+  font-size: 21px;
+  color: var(--red);
+}
+
+/* BUTTONS */
+
+.welcome-card button,
+.letter-intro button {
+  background: var(--red);
+  color: white;
+  border-radius: 30px;
+  padding: 15px 25px;
+  margin-top: 30px;
+  transition: 0.3s;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.welcome-card button:hover,
+.letter-intro button:hover {
+  background: var(--dark);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(168, 46, 72, 0.2);
+}
+
+.next-button {
+  background: transparent;
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 13px 24px;
+  border-radius: 30px;
+  margin-top: 35px;
+  transition: 0.3s;
+}
+
+.next-button:hover {
+  background: var(--red);
+  color: white;
+}
+
+/* HEADINGS */
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 8vw, 75px);
+  line-height: 0.95;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+/* SCRAPBOOK */
+
+.scrapbook {
+  position: relative;
+  width: min(580px, 92vw);
+  background: var(--cream);
+  padding: 50px 40px;
+  text-align: left;
+  line-height: 1.8;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  box-shadow: 10px 15px 35px rgba(110, 36, 57, 0.16);
+  transform: rotate(-1deg);
+}
+
+.scrapbook p {
+  margin-bottom: 18px;
+}
+
+.scrapbook .signature {
+  text-align: right;
+  font-family: "Parisienne", cursive;
+  color: var(--red);
+  font-size: 28px;
+}
+
+.tape {
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  background: rgba(233, 174, 186, 0.65);
+  top: -12px;
+  left: 40%;
+  transform: rotate(3deg);
+}
+
+/* LOVE NOTES */
+
+.hint {
+  margin-top: -15px;
+  margin-bottom: 25px;
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  width: min(700px, 95vw);
+}
+
+.notes-grid button {
+  min-height: 120px;
+  background: var(--cream);
+  color: var(--dark);
+  border-radius: 8px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  box-shadow: 5px 8px 18px rgba(110, 36, 57, 0.12);
+  transition: 0.3s;
+}
+
+.notes-grid button:hover {
+  transform: rotate(-3deg) translateY(-5px);
+  background: #fff0f1;
+}
+
+#note-display {
+  min-height: 60px;
+  margin-top: 25px;
+  max-width: 600px;
+  font-family: "Parisienne", cursive;
+  color: var(--red);
+  font-size: 27px;
+}
+
+/* PROMISE CARD */
+
+.promise-card {
+  width: min(600px, 94vw);
+  padding: 40px 30px;
+  background: var(--cream);
+  border-radius: 8px;
+  box-shadow: 10px 15px 35px rgba(110, 36, 57, 0.14);
+  text-align: left;
+}
+
+.promise-card p {
+  padding: 15px 0;
+  border-bottom: 1px dashed #e8bdc6;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+}
+
+.promise-card p:last-child {
+  border-bottom: none;
+}
+
+.bottom-message {
+  margin-top: 30px;
+}
+
+/* LETTER */
+
+.envelope {
+  font-size: 85px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.letter-intro h2 {
+  margin-bottom: 0;
+}
+
+.letter-paper {
+  display: none;
+  width: min(650px, 94vw);
+  padding: 45px 40px;
+  background: var(--cream);
+  text-align: left;
+  box-shadow: 12px 18px 45px rgba(110, 36, 57, 0.2);
+  animation: appear 0.8s ease;
+}
+
+.letter-paper.show {
+  display: block;
+}
+
+.letter-paper h2 {
+  font-size: 48px;
+  color: var(--red);
+  margin: 15px 0 25px;
+}
+
+.letter-paper p:not(.handwritten):not(.signature) {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.closing {
+  margin-top: 30px;
+  font-size: 32px;
+}
+
+.signature {
+  text-align: right;
+  font-family: "Parisienne", cursive;
+  color: var(--red);
+  font-size: 27px;
+  margin-top: 20px;
+}
+
+.restart {
+  margin-top: 25px;
+  background: transparent;
+  color: var(--red);
+  font-size: 12px;
+  display: none;
+}
+
+.restart.show {
+  display: block;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .page {
+    padding: 45px 16px;
+  }
+
+  .welcome-card {
+    padding: 50px 20px;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .notes-grid button {
+    min-height: 100px;
+    font-size: 19px;
+  }
+
+  .scrapbook {
+    padding: 35px 25px;
+    font-size: 19px;
+  }
+
+  .promise-card {
+    padding: 25px 20px;
+  }
+
+  .promise-card p {
+    font-size: 19px;
+  }
+
+  .letter-paper {
+    padding: 35px 24px;
+  }
+
+  .letter-paper h2 {
+    font-size: 40px;
+  }
+
+  .letter-paper p:not(.handwritten):not(.signature) {
+    font-size: 19px;
+  }
+}
